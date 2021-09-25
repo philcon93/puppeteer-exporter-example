@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // Routes
 app.post('/', async (req, res) => {
   let headers, body, status;
-  const location = req?.body?.href || LOCAL_LOCATION;
+  const location = req.body.href || LOCAL_LOCATION;
 
   if (req.body.type === undefined || req.body.size === undefined) {
     status = 400;
